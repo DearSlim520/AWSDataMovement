@@ -5,7 +5,7 @@ import { PIPELINE_CONFIG, ENVIRONMENTS } from '../lib/config/config';
 
 const app = new cdk.App();
 
-const AWSDataMovementPipeline = new CodePipelineStack(app, 'AWSDataMovementPipelineStackDev', {
-    env: ENVIRONMENTS.dev,
-    pipelineConfig: PIPELINE_CONFIG.dev
+const AWSDataMovementPipeline = new CodePipelineStack(app, 'AWSDataMovementPipelineStackMain', {
+    env: ENVIRONMENTS.main,
+    pipelineConfig: PIPELINE_CONFIG.main
 });

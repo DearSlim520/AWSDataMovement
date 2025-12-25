@@ -2,7 +2,7 @@ import { Environment } from 'aws-cdk-lib';
 import { Stage } from 'aws-cdk-lib/aws-apigateway';
 
 // define the pipeline config, for now we only have one
-export type StageName = 'dev'
+export type StageName = 'main'
 
 // define the environment
 export interface AWSDataMovementEnvironment extends Environment {
@@ -12,12 +12,12 @@ export interface AWSDataMovementEnvironment extends Environment {
     readonly stageName: StageName;
 }
 export const ENVIRONMENTS: Record<StageName, AWSDataMovementEnvironment> = {
-    dev: {
+    main: {
         account: '962798360015',
-        accountName: 'awsDM-dev',
+        accountName: 'awsDM-main',
         accountEmail: 'dearslim99@gmail.com',
         region: 'us-east-1',
-        stageName: 'dev'
+        stageName: 'main'
     }
 }
 
@@ -34,13 +34,13 @@ export interface pipelineConfig {
     readonly stageName: StageName;
 }
 export const PIPELINE_CONFIG: Record<StageName, pipelineConfig> = {
-    dev: {
+    main: {
         serviceName: 'AWSDataMovement',
         name: 'AWSDataMovement',
         repository: 'DearSlim520/AWSDataMovement',
-        branch: 'dev',
+        branch: 'main',
         connectionArn: 'arn:aws:codeconnections:us-east-1:962798360015:connection/4b23b025-37cd-44d9-9931-7728109b6aeb',
-        stageName: 'dev',
+        stageName: 'main',
         stacks: {
         }
     }
