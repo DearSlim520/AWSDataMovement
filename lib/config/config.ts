@@ -39,7 +39,7 @@ export const PIPELINE_CONFIG: Record<StageName, pipelineConfig> = {
         name: 'AWSDataMovement',
         repository: 'DearSlim520/AWSDataMovement',
         branch: 'main',
-        connectionArn: 'arn:aws:codeconnections:us-east-1:962798360015:connection/4b23b025-37cd-44d9-9931-7728109b6aeb',
+        connectionArn: 'arn:aws:codeconnections:us-east-1:962798360015:connection/8b97bd78-45e3-4eff-9f56-c6959516b1e6',
         stageName: 'main',
         stacks: {
         }
