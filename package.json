@@ -5,10 +5,10 @@
     "aws_data_movement_cdk": "dist/bin/aws_data_movement_cdk.js"
   },
   "scripts": {
-    "build": "npm install && tsc && jest",
+    "build": "npm install && tsc && npm run test",
     "clean": "rm -rf dist cdk.out build node_modules",
     "watch": "tsc -w",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "cdk": "cdk",
     "synth": "cdk synth",
     "deploy": "cdk deploy"

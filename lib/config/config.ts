@@ -13,9 +13,9 @@ export interface AWSDataMovementEnvironment extends Environment {
 }
 export const ENVIRONMENTS: Record<StageName, AWSDataMovementEnvironment> = {
     main: {
-        account: '962798360015',
+        account: '703082531057',
         accountName: 'awsDM-main',
-        accountEmail: 'dearslim99@gmail.com',
+        accountEmail: 'dearslim99+awsdm@gmail.com',
         region: 'us-east-1',
         stageName: 'main'
     }
@@ -39,7 +39,7 @@ export const PIPELINE_CONFIG: Record<StageName, pipelineConfig> = {
         name: 'AWSDataMovement',
         repository: 'DearSlim520/AWSDataMovement',
         branch: 'main',
-        connectionArn: 'arn:aws:codeconnections:us-east-1:962798360015:connection/8b97bd78-45e3-4eff-9f56-c6959516b1e6',
+        connectionArn: 'arn:aws:codeconnections:us-east-2:703082531057:connection/7f0064e2-e2d1-4da4-8866-84edc2c722c4',
         stageName: 'main',
         stacks: {
         }
