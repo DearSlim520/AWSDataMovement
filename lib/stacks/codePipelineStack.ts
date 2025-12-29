@@ -27,6 +27,7 @@ export class CodePipelineStack extends Stack {
                 commands: [
                     'npm ci',
                     'npm run build',
+                    'npx cdk synth --output cdk.out --app "npx ts-node bin/aws_data_movement_cdk.ts"',
                     'npx cdk synth'
                 ],
                 primaryOutputDirectory: 'cdk.out',
