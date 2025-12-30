@@ -1,0 +1,1 @@
+{"version":3,"file":"dataReplicationStack.js","sourceRoot":"","sources":["../../../lib/stacks/dataReplicationStack.ts"],"names":[],"mappings":";;;AAAA,6CAAgD;AAQhD,MAAa,oBAAqB,SAAQ,mBAAK;IAC3C,YAAY,KAAgB,EAAE,EAAU,EAAE,KAAgC;QACtE,KAAK,CAAC,KAAK,EAAE,EAAE,EAAE,KAAK,CAAC,CAAC;IAE5B,CAAC;CACJ;AALD,oDAKC"}

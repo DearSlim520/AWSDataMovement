@@ -22,7 +22,15 @@ export const ENVIRONMENTS: Record<StageName, AWSDataMovementEnvironment> = {
 }
 
 // define the stack
-export interface AWSDataMovementStack {}
+export interface AWSDataMovementStack {
+    readonly dataIngestionStack?: dataIngestionStackProps;
+    readonly dataReplicationStack?: dataReplicationStackProps;
+    readonly dataBackfillStack?: dataBackfillStackProps;
+}
+
+export interface dataIngestionStackProps {}
+export interface dataReplicationStackProps {}
+export interface dataBackfillStackProps {}
 // define the pipeline config
 export interface pipelineConfig {
     readonly serviceName: string;
@@ -42,7 +50,7 @@ export const PIPELINE_CONFIG: Record<StageName, pipelineConfig> = {
         connectionArn: 'arn:aws:codeconnections:us-east-2:703082531057:connection/7f0064e2-e2d1-4da4-8866-84edc2c722c4',
         stageName: 'main',
         stacks: {
+            dataIngestionStack: {},
         }
     }
 };
-
