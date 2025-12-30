@@ -1,7 +1,5 @@
 import { Stack, StackProps, RemovalPolicy, Duration } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
-import * as iam from 'aws-cdk-lib/aws-iam';
-import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as targets from 'aws-cdk-lib/aws-events-targets';
 import * as sqs from 'aws-cdk-lib/aws-sqs';
@@ -16,7 +14,6 @@ export interface dataIngestionProps extends StackProps {
 }
 
 export class dataIngestionStack extends Stack {
-    public readonly dataIngestion: s3.Bucket;
     public readonly processingQueue: sqs.Queue;
     public readonly deadLetterQueue: sqs.Queue;
     public readonly processingLambda: lambda.Function;
@@ -25,12 +22,6 @@ export class dataIngestionStack extends Stack {
 
     constructor(scope: Construct, id: string, props: dataIngestionProps) {
         super(scope, id, props);
-
-        // Existing S3 bucket
-        this.dataIngestion = new s3.Bucket(this, 'DataIngestionBucket', {
-            removalPolicy: RemovalPolicy.DESTROY,
-            autoDeleteObjects: true,
-        });
 
         // Dead Letter Queue for failed messages
         this.deadLetterQueue = new sqs.Queue(this, 'DeadLetterQueue', {
